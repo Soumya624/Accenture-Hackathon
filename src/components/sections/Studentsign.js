@@ -144,7 +144,7 @@ const FeaturesSplit = ({
                 <div className="container">
                     <div className={innerClasses}>
                         <SectionHeader data={sectionHeader} className="center-content">
-                            <h2>{t('key26')}</h2>
+                            <h2>{t('key25')}</h2>
                         </SectionHeader>
                         <div className={splitClasses}>
 
