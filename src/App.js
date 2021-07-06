@@ -64,7 +64,7 @@ const App = () => {
           <AppRoute exact path="/Dashboard4_Donor" component={Dash4Donor} layout={LayoutDonor} />
           <AppRoute exact path="/News_Donor" component={NewsDonor} layout={LayoutDefault} />
           <AppRoute exact path="/Feed_Donor" component={FeedDonor} layout={LayoutDefault} />
-          <AppRoute exact path="/Pay" component={Pay} layout={LayoutDefault} />
+          <AppRoute exact path="/Pay" component={Pay} layout={LayoutDonor} />
           <AppRoute exact path="/Profile" component={Profile} layout={LayoutDefault} />
           <AppRoute exact path="/Login_Student" component={LoginStudent} layout={LayoutDefault} />
           <AppRoute exact path="/Signup_Student" component={SignupStudent} layout={LayoutDefault} />

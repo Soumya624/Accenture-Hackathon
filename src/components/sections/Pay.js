@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import logo from './logo.svg'
+import logo from '../../assets/images/x4.jpg'
 import axios from '../../api/axios';
 import GlobalState from "../../contexts/globalstate"
 import Globalemail from '../../contexts/globalemail';
@@ -98,34 +98,19 @@ function App() {
 
 
 	return (
-		// <div className="App">
-		// 	<header className="App-header">
-		// 		<p>
-		// 			Edit <code>src/App.js</code> and save to reload.
-		// 		</p>
-		// 		<a
-		// 			onClick={displayRazorpay}
-		// 			target="_blank"
-		// 			rel="noopener noreferrer"
-		// 		>
-		// 			Donate $5
-		// 		</a>
-		// 	</header>
-		// </div>
         <section>
         <div className="container" style={{alignItems:"center"}}>
           <div>
             <SectionHeader data={sectionHeader} className="center-content" />
               <center>
                 <br/><br/>
-                <h2>Payments</h2>
-                <img src={logo} className="App-logo" alt="logo" style={{width:"40%"}}/>
+                <img src={logo} className="App-logo" alt="logo" style={{width:"40%", marginTop:"15%"}}/><br/>
                 <p className="m-0" style={{fontSize:"14px", textAlign:"center"}}>
-                    Click the following button!
+                    Thank you for your kind support. Click the following<br/>button to continue!
                 </p>
                 <br/>
                 <button href="#" onClick={displayRazorpay} rel="noopener noreferrer" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Donate</button>
-                <a href="/Declaration" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Cancel</a>
+                <a href="Login_Donor" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Cancel</a>
               </center>
               <br/>
           </div>
