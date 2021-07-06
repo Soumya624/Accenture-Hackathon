@@ -104,7 +104,7 @@ const FeaturesTiles = ({
 
     const sectionHeader = {
         title: "",
-        paragraph: "-"
+        paragraph: "We provide a one to one give and take method so you can know everything about your impact"
     };
 
     return (
@@ -124,21 +124,20 @@ const FeaturesTiles = ({
                                             <img
                                                 src={student.photo}
                                                 alt="Features split 03"
-                                                style={{width: "150px", height:"120px"}}
+                                                style={{width: "150px", height:"150px"}}
                                             />
                                             <p style={{
-                                                textTransform:"uppercase",
+                                                marginBottom:"2%",
                                                 fontSize: "14px",
-                                                marginTop: "2%"
-                                            }}>{student.name}<br/>Age: {student.age}<br/>City: {student.city}<br/></p>
-                                            <a href="/Profile"
+                                                marginTop: "3%"
+                                            }}>{student.name}<br/>Email: {student.email}</p>
+                                            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en"
                                                className="button button-primary button-wide-mobile button-sm"
                                                style={{
                                                    backgroundColor: "#3d946e",
                                                    borderRadius: "20px",
                                                    marginTop: "2%"
-                                               }}>Read
-                                                More</a>
+                                               }}>Meet Now</a>
                                         </center>
                                     </div>
                                 )
@@ -152,7 +151,7 @@ const FeaturesTiles = ({
                     <br/><br/>
                     <SectionHeader data={sectionHeader} className="center-content">
                         <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key16')}</h2>
-                        <p>{t('key17')}</p>
+                        {/* <p>{t('key17')}</p> */}
                     </SectionHeader>
                     <div className={tilesClasses}>
                         <div className="tiles-item reveal-from-bottom">

@@ -57,7 +57,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: "",
-    paragraph: "-"
+    paragraph: "We trust your motive that makes us help you impact lives"
   };
 
   return (
@@ -69,7 +69,7 @@ const FeaturesSplit = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
             <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key18')}</h2>
-            <p>{t('key19')}</p>
+            {/* <p>{t('key19')}</p> */}
           </SectionHeader>
           <div className={splitClasses}>
 

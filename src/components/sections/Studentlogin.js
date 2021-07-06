@@ -59,7 +59,7 @@ const FeaturesSplit = ({
 
     const sectionHeader = {
         title: '',
-        paragraph: '-'
+        paragraph: 'We let you know how your donation money is used in the welfare of children and helps you build a personal connection'
     };
     const [token,setToken]=useContext(GlobalState)
     console.log(token)

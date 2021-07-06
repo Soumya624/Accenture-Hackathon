@@ -144,7 +144,7 @@ const FeaturesSplit = ({
                             <TimePicker />
                             <br/><br/>
                             <a href="#" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Meet Now</a>
-                            <a href="/Terms" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Go Ahead</a>
+                            <a href="/Pay" className="button button-primary button-wide-mobile button-sm" style={{backgroundColor:"#3d946e", margin:"1%", borderRadius:"20px"}}>Go Ahead</a>
                         </div>
                 </center>
                 </p>

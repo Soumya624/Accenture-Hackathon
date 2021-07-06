@@ -103,8 +103,8 @@ const FeaturesSplit = ({
         if (newsList.length){
             return newsList.map((news, index)=>{
                 return(
-                    <div className="split-item" id={index}>
-                        <div className="split-item-image center-content-mobile" data-reveal-container=".split-item">
+                    <div className="split-item" id={index} style={{margin:"0 0.5% 0.5% 0.5%"}}>
+                        <div className="split-item-image center-content-mobile" data-reveal-container=".split-item" style={{padding:"1%"}}>
                             <h3 className="mt-0 mb-12">
                                 {news.heading}
                             </h3>
@@ -117,7 +117,7 @@ const FeaturesSplit = ({
                                 'split-item-content center-content-mobile',
                                 imageFill && 'split-item-image-fill'
                             )}
-                             data-reveal-container=".split-item">
+                             data-reveal-container=".split-item" style={{padding:"1%"}}>
                             <Image
                                 src={news.image_url}
                                 alt="Features split 01"
@@ -166,7 +166,7 @@ const FeaturesSplit = ({
 
     const sectionHeader = {
         title: '',
-        paragraph: '-'
+        paragraph: 'We provide a one to one give and take method so you can know everything about your impact'
     };
 
 
@@ -188,13 +188,13 @@ const FeaturesSplit = ({
                                 <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9"/>
                             </svg>
                         </Input>
-                        <p>{t('key17')}</p>
+                        {/* <p>{t('key17')}</p> */}
                     </SectionHeader>
                     <div className={splitClasses}>
 
                         <NewsListView/>
 
-                        <br/>
+                        <br/><br/>
                         <Carousel responsive={responsive} style={{alignItems: "center"}}>
                             <div>
                                 <center>
@@ -228,7 +228,7 @@ const FeaturesSplit = ({
                                     />
                                 </center>
                             </div>
-                        </Carousel>;
+                        </Carousel>
 
                     </div>
                 </div>

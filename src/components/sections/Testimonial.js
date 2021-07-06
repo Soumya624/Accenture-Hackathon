@@ -51,7 +51,7 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: "",
-    paragraph: "-"
+    paragraph: "We let you know how your donation money is used in the welfare of children and helps you build a personal connection"
   };
 
   return (
@@ -63,7 +63,7 @@ const Testimonial = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
             <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key20')}</h2>
-            <p>{t('key21')}</p>
+            {/* <p>{t('key21')}</p> */}
           </SectionHeader>
           <div className={tilesClasses}>
             <div className="tiles-item reveal-from-right" data-reveal-delay="200" style={{backgroundColor:"#ffffff", borderRadius:"25px", margin:"1%"}}>
