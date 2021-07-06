@@ -140,12 +140,6 @@ const Header = ({
                     <li>
                       <Link to="/Dashboard1_Donor" onClick={closeMenu}>{t('key31')}</Link>
                     </li>
-                    <li>
-                      <Link to="/Feed_Donor" onClick={closeMenu}>{t('key4')}</Link>
-                    </li>
-                    <li>
-                      <Link to="/News_Donor" onClick={closeMenu}>{t('key5')}</Link>
-                    </li>
                   </ul>
                   {!hideSignin &&
                     <ul

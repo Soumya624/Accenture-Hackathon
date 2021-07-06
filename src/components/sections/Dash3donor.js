@@ -261,48 +261,48 @@ const userToken1 = {
                                     
                                     
                                   
-                                    <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.semail,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link>
+                                    {/* <Link to={{pathname:"/Dashboard4_Donor",state:{email:props.location.state.semail,student:student,studentMarklist:studentMarklist}}} className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Show More</Link> */}
                                 </div>
                         </div>
             </div>
 
 
            <center>
-           <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Journal</a>
+           <a href="#" style={{color:"#3d946e", fontSize:"14px", margin:"0rem"}}>Extra Academic Activities</a>
            </center>
-           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #3d946e"}}>
+           <div style={{padding:"3%", margin:"1% 0% 4% 0", border:"1px solid #3d946e", boxShadow: "#0000000a 3px 2px 2px", borderRadius:"20px"}}>
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column2" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        02/08/2021
+                                        02/08/2019
                                     </p>
                                 </div>
                                 <div className="column1" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                        Participated in the Implementation of Modern Physics Course under 'Sampoorna' Summer Camp conducted at Sri Prakash Synergy Govt. High School.
                                     </p>
                                 </div>
                         </div>
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column2" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        02/08/2021
+                                        02/08/2020
                                     </p>
                                 </div>
                                 <div className="column1" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                        Participated in the National Athletic Cohort conducted at Sri Prakash Synergy Govt. High School. And won the third prize from there.
                                     </p>
                                 </div>
                         </div>
                         <br/>
                         <div className="row" style={{alignItems:"center"}}> 
                                 <div className="column1" style={{padding:"1%"}}>
-                                    <Input id="newsletter" type="name" hasIcon="right" name="pin" style={{borderRadius:"20px", borderColor:"grey"}}>  
+                                    <Input id="newsletter" type="name" hasIcon="right" name="pin" placeholder="Enter Your Amount" style={{borderRadius:"20px", borderColor:"grey"}}>  
                                     </Input>
                                 </div>
                                 <div className="column2" style={{padding:"1%"}}>
-                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Send</Link>
+                                    <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Donate</Link>
                                 </div>
                         </div>
             </div>
@@ -318,8 +318,8 @@ const userToken1 = {
                                 </div>
                                 <div className="column" style={{padding:"1%"}}>
                                     <p className="text-sm mb-0" style={{textAlign:"left", fontSize:"14px"}}>
-                                    {student.intro}<br/>Guardian Name:{student.guardianName } <br/>
-                                    Guardian Age: {student.guardianAge}<br/>Guardian gender: {student.guardianGender}<br/>Guardian phone: {student.guardianPhone}<br/>Relation: {student.guardianRelation}<br/>Address: {student.address}
+                                    {student.intro}<br/><br/>Guardian Name:{student.guardianName } <br/>
+                                    Guardian Age: {student.guardianAge}<br/>Guardian gender: {student.guardianGender}<br/>Guardian phone: {student.guardianPhone}<br/>Relation: {student.guardianRelation}
                                     </p><br/>
                                 </div>
                         </div>

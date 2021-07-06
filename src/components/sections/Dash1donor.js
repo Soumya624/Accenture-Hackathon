@@ -154,20 +154,20 @@ useEffect(() => {
                     <div className="row">
                       <div className="column">
                       &#169; Ace<br/>
-                        435353456 <a href="#" style={{color:"#3d946e", fontSize:"12px", marginLeft:"5px"}}>T&C</a>
+                        435353456
                       </div>
                       <div className="column">
                       <Link to="#" className="button button-primary button-wide-mobile button-sm" onClick="" style={{backgroundColor:"#3d946e"}}>Gain More</Link>
                       </div>
                     </div>
                     <br/>
-                    <div style={{marginBottom:"0.5%"}}>
+                    {/* <div style={{marginBottom:"0.5%"}}>
                         Show Your Karma
                     </div>
                     <div style={{fontSize:"14px"}}>
                         Share On
                     </div>
-                    <FooterSocial/>
+                    <FooterSocial/> */}
                 </p>
               </div>
           </div>
@@ -176,7 +176,7 @@ useEffect(() => {
 
           <div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom" style={{backgroundColor:"#ffffff", borderRadius:"0", margin:"1%"}}>
-              <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"0", border:"1px solid #3d946e"}}>
+              <div className="tiles-item-inner" style={{backgroundColor:"white", border:"1px solid #3d946e", borderRadius:"20px",boxShadow: "#0000000a 3px 2px 2px"}}>
                 <div>
                 <center>
                 <img src="https://www.freeiconspng.com/thumbs/person-icon/clipart--person-icon--cliparts-15.png" alt="" style={{width:"2rem", textAlign:"center"}}/>
