@@ -62,7 +62,7 @@ const FeaturesSplit = ({
 
     const sectionHeader = {
         title: '',
-        paragraph: 'We let you know how your donation money is used in the welfare of children and helps you build a personal connection'
+        paragraph: 'We provide a one to one give and take method so you can know everything'
     };
 
 
