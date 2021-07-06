@@ -6,6 +6,7 @@ import Image from '../elements/Image';
 import Pagination from 'rc-pagination';
 import {Link} from 'react-router-dom';
 import Carousel from "react-multi-carousel";
+import Cta from './Cta';
 import Input from '../elements/Input';
 import "react-multi-carousel/lib/styles.css";
 import i18n from "i18next";
@@ -59,7 +60,7 @@ const FeaturesSplit = ({
                            ...props
                        }) => {
 
-    const [studentList, setStudentList] = useState([])
+    const [studentList, setStudentList] = useState(null)
     const [citySearch, setCitySearch] = useState([])
 
     useEffect(() => {
@@ -132,6 +133,14 @@ const FeaturesSplit = ({
         paragraph: 'We provide a one to one give and take method so you can know everything about your impact'
     };
 
+    if(studentList === null){
+        return <div style={{
+            position:"relative",height:"90vh",top:"50vh", textAlign:"center"
+        }}>
+            <h3 style={{fontSize:"22px", padding:"0 15%", color:"rgb(61 148 110 / 55%)"}}>"The presence of even a single poor child on the street means a million defeats for mankind." ~ <b>Mehmet Murat Ildan</b></h3>
+        </div>
+    }
+
     // alert("Please Use Student's Emails to Schedule a Meeing");
     return (
         <section
@@ -160,7 +169,7 @@ const FeaturesSplit = ({
                                     <div className="split-item">
                                         <div className="split-item-content center-content-mobile"
                                              data-reveal-container=".split-item">
-                                            <h4 className="mt-0 mb-12">
+                                            <h4 className="mt-0 mb-12" style={{color:"#3d946e"}}>
                                                 {student.name}
                                                 
                                             </h4>
@@ -238,10 +247,13 @@ const FeaturesSplit = ({
                             </div>
                         }
                     </Carousel>
+                    <br/>
                     </div>
                 </div>
             </div>
+            {/* <Cta split/> */}
         </section>
+        
     );
 }
 

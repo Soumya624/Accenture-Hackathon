@@ -55,7 +55,7 @@ const FeaturesSplit = ({
                        }) => {
 
 
-    const [newsList, setNewsList] = useState([])
+    const [newsList, setNewsList] = useState(null)
     const [searchText, setSearchText] = useState('');
 
     useEffect(()=>{
@@ -169,6 +169,13 @@ const FeaturesSplit = ({
         paragraph: 'We provide a one to one give and take method so you can know everything about your impact'
     };
 
+    if(newsList === null){
+        return <div style={{
+            position:"relative",height:"90vh",top:"50vh", textAlign:"center"
+        }}>
+            <h3 style={{fontSize:"24px", padding:"0 15%", color:"rgb(61 148 110 / 55%)"}}>"A big hole in a poor child's shoe is the simplest evidence to condemn the society he lives in." ~ <b>Mehmet Murat Ildan</b></h3>
+        </div>
+    }
 
     return (
         <section
