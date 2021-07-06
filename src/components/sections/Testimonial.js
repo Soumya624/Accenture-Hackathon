@@ -51,7 +51,7 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: "",
-    paragraph: "-"
+    paragraph: "We let you know how your donation money is used in the welfare of children and helps you build a personal connection"
   };
 
   return (
@@ -62,11 +62,10 @@ const Testimonial = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
-            <h2>{t('key20')}</h2>
-            <p>{t('key21')}</p>
+            <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key20')}</h2>
+            {/* <p>{t('key21')}</p> */}
           </SectionHeader>
           <div className={tilesClasses}>
-
             <div className="tiles-item reveal-from-right" data-reveal-delay="200" style={{backgroundColor:"#ffffff", borderRadius:"25px", margin:"1%"}}>
               <div className="tiles-item-inner" style={{backgroundColor:"white", borderRadius:"20px", border:"1px solid #3d946e"}}>
                 <div className="testimonial-item-content">
@@ -75,7 +74,7 @@ const Testimonial = ({
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
+                  <span className="testimonial-item-name text-color-high" style={{color:"rgb(61 148 110 / 50%)"}}>Roman Level</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
                     <a href="#0">eDOPT</a>
@@ -92,7 +91,7 @@ const Testimonial = ({
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Diana Rynzhuk</span>
+                  <span className="testimonial-item-name text-color-high" style={{color:"rgb(61 148 110 / 50%)"}}>Diana Rynzhuk</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
                     <a href="#0">eDOPT</a>
@@ -109,7 +108,7 @@ const Testimonial = ({
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Ben Stafford</span>
+                  <span className="testimonial-item-name text-color-high" style={{color:"rgb(61 148 110 / 50%)"}}>Ben Stafford</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
                     <a href="#0">eDOPT</a>

@@ -104,7 +104,7 @@ const FeaturesTiles = ({
 
     const sectionHeader = {
         title: "",
-        paragraph: "-"
+        paragraph: "We provide a one to one give and take method so you can know everything about your impact"
     };
 
     return (
@@ -119,25 +119,25 @@ const FeaturesTiles = ({
                         {
                             studentList.length ? studentList.map((student, index) => {
                                 return (
-                                    <div>
+                                    <div style={{height:"300px", margin:"10px",borderRadius:'20px', paddingTop:"10px", paddingBottom:"10px", boxShadow:"#0000000a 3px 2px 2px"}}>
                                         <center>
-                                            <Image
+                                            <img
                                                 src={student.photo}
                                                 alt="Features split 03"
-                                                style={{width: "50%"}}
+                                                style={{width: "150px", height:"150px"}}
                                             />
                                             <p style={{
+                                                marginBottom:"2%",
                                                 fontSize: "14px",
-                                                marginTop: "2%"
-                                            }}>{student.name}<br/>Age: {student.age}<br/>City: {student.city}<br/></p>
-                                            <a href="/Profile"
+                                                marginTop: "3%"
+                                            }}>{student.name}<br/>Email: {student.email}</p>
+                                            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en"
                                                className="button button-primary button-wide-mobile button-sm"
                                                style={{
                                                    backgroundColor: "#3d946e",
                                                    borderRadius: "20px",
                                                    marginTop: "2%"
-                                               }}>Read
-                                                More</a>
+                                               }}>Meet Now</a>
                                         </center>
                                     </div>
                                 )
@@ -150,8 +150,8 @@ const FeaturesTiles = ({
                     </Carousel>
                     <br/><br/>
                     <SectionHeader data={sectionHeader} className="center-content">
-                        <h2>{t('key16')}</h2>
-                        <p>{t('key17')}</p>
+                        <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key16')}</h2>
+                        {/* <p>{t('key17')}</p> */}
                     </SectionHeader>
                     <div className={tilesClasses}>
                         <div className="tiles-item reveal-from-bottom">
@@ -167,7 +167,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key10')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">
@@ -190,7 +190,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key11')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">
@@ -212,7 +212,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key12')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">
@@ -235,7 +235,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key13')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">
@@ -258,7 +258,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key14')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">
@@ -281,7 +281,7 @@ const FeaturesTiles = ({
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
+                                    <h4 className="mt-0 mb-8" style={{fontWeight:"initial",color:"rgb(61, 148, 110)",fontSize:"18px"}}>
                                         {t('key15')}
                                     </h4>
                                     {/* <p className="m-0 text-sm">

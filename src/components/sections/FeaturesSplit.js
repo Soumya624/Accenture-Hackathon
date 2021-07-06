@@ -57,7 +57,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: "",
-    paragraph: "-"
+    paragraph: "We trust your motive that makes us help you impact lives"
   };
 
   return (
@@ -68,8 +68,8 @@ const FeaturesSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
-            <h2>{t('key18')}</h2>
-            <p>{t('key19')}</p>
+            <h2 style={{color:"rgb(61, 148, 110)"}}>{t('key18')}</h2>
+            {/* <p>{t('key19')}</p> */}
           </SectionHeader>
           <div className={splitClasses}>
 
@@ -78,7 +78,7 @@ const FeaturesSplit = ({
                 {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
                   </div> */}
-                <h3 className="mt-0 mb-12">
+                <h3 className="mt-0 mb-12" style={{color:"rgb(61 148 110 / 50%)"}}>
                   Lorem Ipsum
                   </h3>
                 <p className="m-0">
@@ -104,7 +104,7 @@ const FeaturesSplit = ({
                 {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
                   </div> */}
-                <h3 className="mt-0 mb-12">
+                <h3 className="mt-0 mb-12" style={{color:"rgb(61 148 110 / 50%)"}}>
                   Lorem Ipsum
                   </h3>
                 <p className="m-0">
@@ -130,7 +130,7 @@ const FeaturesSplit = ({
                 {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
                   </div> */}
-                <h3 className="mt-0 mb-12">
+                <h3 className="mt-0 mb-12" style={{color:"rgb(61 148 110 / 50%)"}}>
                   Lorem Ipsum
                   </h3>
                 <p className="m-0">

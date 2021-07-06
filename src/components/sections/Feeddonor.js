@@ -6,6 +6,7 @@ import Image from '../elements/Image';
 import Pagination from 'rc-pagination';
 import {Link} from 'react-router-dom';
 import Carousel from "react-multi-carousel";
+import Cta from './Cta';
 import Input from '../elements/Input';
 import "react-multi-carousel/lib/styles.css";
 import i18n from "i18next";
@@ -59,7 +60,7 @@ const FeaturesSplit = ({
                            ...props
                        }) => {
 
-    const [studentList, setStudentList] = useState([])
+    const [studentList, setStudentList] = useState(null)
     const [citySearch, setCitySearch] = useState([])
 
     useEffect(() => {
@@ -129,8 +130,16 @@ const FeaturesSplit = ({
 
     const sectionHeader = {
         title: '',
-        paragraph: '-'
+        paragraph: 'We provide a one to one give and take method so you can know everything about your impact'
     };
+
+    if(studentList === null){
+        return <div style={{
+            position:"relative",height:"90vh",top:"50vh", textAlign:"center"
+        }}>
+            <h3 style={{fontSize:"22px", padding:"0 15%", color:"rgb(61 148 110 / 55%)"}}>"The presence of even a single poor child on the street means a million defeats for mankind." ~ <b>Mehmet Murat Ildan</b></h3>
+        </div>
+    }
 
     // alert("Please Use Student's Emails to Schedule a Meeing");
     return (
@@ -150,7 +159,7 @@ const FeaturesSplit = ({
                                 <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9"/>
                             </svg>
                         </Input>
-                        <p>{t('key17')}</p>
+                        {/* <p>{t('key17')}</p> */}
                     </SectionHeader>
                     <div className={splitClasses}>
 
@@ -160,20 +169,20 @@ const FeaturesSplit = ({
                                     <div className="split-item">
                                         <div className="split-item-content center-content-mobile"
                                              data-reveal-container=".split-item">
-                                            <h4 className="mt-0 mb-12">
+                                            <h4 className="mt-0 mb-12" style={{color:"#3d946e"}}>
                                                 {student.name}
                                                 
                                             </h4>
                                             <p className="m-0" style={{fontSize: "14px"}}>
-                                                Age : {student.age}
+                                                Age : {student.age}<br/>Email: {student.email}
                                             </p>
                                             <p className="m-0" style={{fontSize: "14px"}}>
                                                 {student.intro?student.intro:"No introduction provided!"}
                                             </p>
                                             <center>
-                                                <a href="/Profile" className="button button-primary button-wide-mobile button-sm"
-                                                   style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Read
-                                                    More</a>
+                                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en" className="button button-primary button-wide-mobile button-sm"
+                                                   style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Meet Now
+                                                    </a>
                                             </center>
                                         </div>
                                         <div className={
@@ -203,70 +212,48 @@ const FeaturesSplit = ({
 
                         <br/>
                         <br/>
-                        <Carousel responsive={responsive} style={{alignItems: "center"}}>
-                            {
-                                studentList.length?studentList.map((student, index)=>{
-                                    return (
-                                        <div>
-                                            <center>
-                                                <Image
-                                                    src={student.photo}
-                                                    alt="Features split 03"
-                                                    style={{width: "50%"}}
-                                                />
-                                                <a href="/Profile" className="button button-primary button-wide-mobile button-sm"
-                                                   style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Read
-                                                    More</a>
-                                            </center>
-                                        </div>
-                                    )
-                                }): <div>
-                                    <center>
-                                       Oops, No Students Yet!
-                                    </center>
-                                </div>
-                            }
-                            <div>
+                        <br/>
+                        <Carousel responsive={responsive} style={{alignItems: "center", marginTop: "5%"}}>
+                        {
+                            studentList.length ? studentList.map((student, index) => {
+                                return (
+                                    <div style={{height:"300px", margin:"10px",borderRadius:'20px', paddingTop:"10px", paddingBottom:"10px", boxShadow:"#0000000a 3px 2px 2px"}}>
+                                        <center>
+                                            <img
+                                                src={student.photo}
+                                                alt="Features split 03"
+                                                style={{width: "150px", height:"150px"}}
+                                            />
+                                            <p style={{
+                                                marginBottom:"2%",
+                                                fontSize: "14px",
+                                                marginTop: "3%"
+                                            }}>{student.name}<br/>Email: {student.email}</p>
+                                            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?vcon=meet&dates=now&hl=en"
+                                               className="button button-primary button-wide-mobile button-sm"
+                                               style={{
+                                                   backgroundColor: "#3d946e",
+                                                   borderRadius: "20px",
+                                                   marginTop: "2%"
+                                               }}>Meet Now
+                                                </a>
+                                        </center>
+                                    </div>
+                                )
+                            }) : <div>
                                 <center>
-                                    <Image
-                                        src={require('./../../assets/images/i1.jpg')}
-                                        alt="Features split 03"
-                                        style={{width: "50%"}}
-                                    />
-                                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm"
-                                       style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Read
-                                        More</a>
+                                    Oops, No Students Yet!
                                 </center>
                             </div>
-                            <div>
-                                <center>
-                                    <Image
-                                        src={require('./../../assets/images/i2.jpg')}
-                                        alt="Features split 03"
-                                        style={{width: "50%"}}
-                                    />
-                                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm"
-                                       style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Read
-                                        More</a>
-                                </center>
-                            </div>
-                            <div>
-                                <center>
-                                    <Image
-                                        src={require('./../../assets/images/i3.jpg')}
-                                        alt="Features split 03"
-                                        style={{width: "50%"}}
-                                    />
-                                    <a href="/Profile" className="button button-primary button-wide-mobile button-sm"
-                                       style={{backgroundColor: "#3d946e", borderRadius: "20px", marginTop: "2%"}}>Read
-                                        More</a>
-                                </center>
-                            </div>
-                        </Carousel>;
+                        }
+                    </Carousel>
+                    <br/>
                     </div>
                 </div>
             </div>
+            {/* <Cta split/> */}
         </section>
+        
     );
 }
 

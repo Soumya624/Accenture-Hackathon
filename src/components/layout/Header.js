@@ -209,6 +209,8 @@ const Header = ({
 
   const { t } = useTranslation();
 
+  const [ x , setX ] = useState("")
+
   return (
     <header
       {...props}
@@ -275,5 +277,4 @@ const Header = ({
 
 Header.propTypes = propTypes;
 Header.defaultProps = defaultProps;
-
 export default Header;

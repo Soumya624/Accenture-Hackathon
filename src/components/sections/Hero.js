@@ -9,8 +9,8 @@ import SectionHeader from './partials/SectionHeader';
 import './style.css';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
-export const x= prompt('Choose Language (English/Hindi). Press OK to Continue with English');
-console.log(x);
+var cariable = prompt("Choose Language (English/Hindi). Press OK to Continue with English")
+export const x= cariable;
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
