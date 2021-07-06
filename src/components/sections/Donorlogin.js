@@ -104,7 +104,7 @@ const FeaturesSplit = ({
       })
       
       .catch((err)=>{
-        alert('password or username incorrect')
+        alert('Invalid Username or Password')
       })
     
   } 

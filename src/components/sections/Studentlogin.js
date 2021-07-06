@@ -59,7 +59,7 @@ const FeaturesSplit = ({
 
     const sectionHeader = {
         title: '',
-        paragraph: 'We let you know how your donation money is used in the welfare of children and helps you build a personal connection'
+        paragraph: 'We provide a one to one give and take method so you can know everything'
     };
     const [token,setToken]=useContext(GlobalState)
     console.log(token)
@@ -85,9 +85,9 @@ const FeaturesSplit = ({
             setUsername1(username)
             setRedirect(true)
         })
-        //.catch((err)=>{
-          //  alert('password or username incorrect')
-        //})
+        .catch((err)=>{
+           alert('Invalid Username or Password')
+        })
     }
     if (redirect){
         return (<Redirect to={{pathname:"/Dashboard1_Student",state:{token:token,username:username}}} />)

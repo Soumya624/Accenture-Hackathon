@@ -160,7 +160,7 @@ const FeaturesTiles = ({
                                     <div className="features-tiles-item-image mb-16"
                                          style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x1.jpg')}
+                                            src={require('./../../assets/images/feature-tile-icon-02.svg')}
                                             alt="Features tile icon 01"
                                             width={100}
                                             height={100}/>
@@ -183,7 +183,7 @@ const FeaturesTiles = ({
                                     <div className="features-tiles-item-image mb-16"
                                          style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x2.jpg')}
+                                            src={require('./../../assets/images/feature-tile-icon-06.svg')}
                                             alt="Features tile icon 02"
                                             width={100}
                                             height={100}/>
@@ -200,15 +200,16 @@ const FeaturesTiles = ({
                             </div>
                         </div>
 
-                        <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+                        <div className="tiles-item reveal-from-bottom">
                             <div className="tiles-item-inner">
                                 <div className="features-tiles-item-header">
-                                    <div className="features-tiles-item-image mb-16" style={{backgroundColor: "white"}}>
+                                    <div className="features-tiles-item-image mb-16"
+                                         style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x7.png')}
-                                            alt="Features tile icon 03"
-                                            width={135}
-                                            height={135}/>
+                                            src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                                            alt="Features tile icon 04"
+                                            width={100}
+                                            height={100}/>
                                     </div>
                                 </div>
                                 <div className="features-tiles-item-content">
@@ -228,7 +229,7 @@ const FeaturesTiles = ({
                                     <div className="features-tiles-item-image mb-16"
                                          style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x4.jpg')}
+                                            src={require('./../../assets/images/feature-tile-icon-01.svg')}
                                             alt="Features tile icon 04"
                                             width={100}
                                             height={100}/>
@@ -251,7 +252,7 @@ const FeaturesTiles = ({
                                     <div className="features-tiles-item-image mb-16"
                                          style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x5.jpg')}
+                                            src={require('./../../assets/images/feature-tile-icon-05.svg')}
                                             alt="Features tile icon 05"
                                             width={100}
                                             height={100}/>
@@ -274,7 +275,7 @@ const FeaturesTiles = ({
                                     <div className="features-tiles-item-image mb-16"
                                          style={{backgroundColor: "#3d946e"}}>
                                         <Image
-                                            src={require('./../../assets/images/x6.jpg')}
+                                            src={require('./../../assets/images/feature-tile-icon-03.svg')}
                                             alt="Features tile icon 06"
                                             width={100}
                                             height={100}/>
