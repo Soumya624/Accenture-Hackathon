@@ -13,7 +13,7 @@ import { Chart } from "react-google-charts";
 import { constant } from "lodash";
 import GlobalState from "../../contexts/globalstate";
 import Globalemail from "../../contexts/globalemail";
-
+import { PaystackConsumer } from "react-paystack";
 //const index = this.props.location.state.prodIndex;
 
 const propTypes = {
@@ -22,6 +22,21 @@ const propTypes = {
 
 const defaultProps = {
   ...SectionSplitProps.defaults,
+};
+
+const config = {
+  reference: new Date().getTime(),
+  email: "user@example.com",
+  amount: 20000,
+  publicKey: "pk_test_dsdfghuytfd2345678gvxxxxxxxxxx",
+};
+
+const handleSuccess = (reference) => {
+  console.log(reference);
+};
+
+const handleClose = () => {
+  console.log("closed");
 };
 
 const FeaturesSplit = ({
@@ -47,6 +62,13 @@ const FeaturesSplit = ({
     invertColor && "invert-color",
     className
   );
+
+  const componentProps = {
+    ...config,
+    text: "Paystack Button Implementation",
+    onSuccess: (reference) => handleSuccess(reference),
+    onClose: handleClose,
+  };
 
   const innerClasses = classNames(
     "features-split-inner section-inner",
@@ -354,19 +376,24 @@ const userToken1 = {
                       type="name"
                       hasIcon="right"
                       name="pin"
-                      placeholder="Enter Your Amount"
+                      placeholder="Enter Your Message"
                       style={{ borderRadius: "20px", borderColor: "grey" }}
                     ></Input>
                   </div>
                   <div className="column2" style={{ padding: "1%" }}>
-                    <a
-                    href="https://razorpay.com/upi/"
-                      className="button button-primary button-wide-mobile button-sm"
-                      onClick=""
-                      style={{ backgroundColor: "#3d946e" }}
-                    >
-                      Donate
-                    </a>
+                    <PaystackConsumer {...componentProps}>
+                      {({ initializePayment }) => (
+                        <button
+                          className="button button-primary button-wide-mobile button-sm"
+                          style={{ backgroundColor: "#3d946e" }}
+                          onClick={() =>
+                            initializePayment(handleSuccess, handleClose)
+                          }
+                        >
+                          Donate Now!
+                        </button>
+                      )}
+                    </PaystackConsumer>
                   </div>
                 </div>
               </div>

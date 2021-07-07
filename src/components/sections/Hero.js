@@ -95,6 +95,7 @@ const Hero = ({
     alignTop && 'align-top'
   );
 
+
   const sectionHeader = {
     title: '',
     paragraph: ''

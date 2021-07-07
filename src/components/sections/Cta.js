@@ -4,9 +4,12 @@ import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Input from "../elements/Input";
 import i18n from "i18next";
+import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
 import { useTranslation, initReactI18next } from "react-i18next";
 import { x } from "./Hero";
-console.log(`${x}`);
+import Button from "../elements/Button";
+console.log(`${x}`)
 
 const propTypes = {
   ...SectionProps.types,
@@ -45,16 +48,51 @@ const Cta = ({
     split && "cta-split"
   );
 
+  const theme = {
+    background: '#f5f8fb',
+    fontFamily: 'Helvetica Neue',
+    headerBgColor: '#EF6C00',
+    headerFontColor: '#fff',
+    headerFontSize: '15px',
+    botBubbleColor: '#EF6C00',
+    botFontColor: '#fff',
+    userBubbleColor: '#fff',
+    userFontColor: '#4a4a4a',
+  };
+const steps = [
+    {
+      id: '0',
+      message: 'Hey! Do You Have Any Problem?',
+      trigger: '1',
+    },
+    {
+      id: '1',
+      user: true,
+      trigger: '2',
+    },
+    {
+        id: '2',
+        message: 'Alright Our Team Will Reach Out. You Can Even Call Us on +91-1234567890!',
+        trigger: '1',
+      },
+  ];
+
   const { t } = useTranslation();
 
   const [_email, setEM] = React.useState("");
-
+  const [flag, setFlag]  = React.useState(false)
+ 
   return (
     <section {...props} className={outerClasses}>
       <center>
         <p className="m-0">{t("key34")}
-        <a
-          href="#"
+        <Button
+          onClick={()=> {
+            console.log(flag)
+            setFlag(!flag)
+            
+            console.log(flag)
+          }}
           className="button button-primary button-wide-mobile button-sm"
           style={{
             backgroundColor: "#3d946e",
@@ -63,7 +101,13 @@ const Cta = ({
           }}
         >
           {t("key35")}
-        </a></p>
+        </Button></p>
+        <br/><br/>
+        <div style={{position:"relative"}}>
+            <ThemeProvider theme={theme}>
+                <ChatBot steps={steps} style={{textAlign:"left", display: flag===true ? "block":"none", fontFamily:"sans-serif"}}/>
+            </ThemeProvider>
+        </div>
       </center><br/><br/>
 
       <div className="container" style={{ backgroundColor: "#3d946e" }}>
