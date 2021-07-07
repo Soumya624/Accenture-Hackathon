@@ -277,9 +277,10 @@ const FeaturesSplit = ({
                           <br />
                           Parent's gender: {userToken.guardianGender}
                           <br />
-                          Parent's phone: {userToken.guardianPhone}
-                          <br />
+                          
                           Relation: {userToken.guardianRelation}
+                          <br />
+                          UPI Id: {userToken.guardianPhone}
                           <br />
                           Address: {userToken.address}
                         </p>

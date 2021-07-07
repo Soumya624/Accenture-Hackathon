@@ -286,7 +286,7 @@ const FeaturesSplit = ({
                                             </div>
                                         </div>
                                         <Input id="newsletter" type="name" hasIcon="right"
-                                               placeholder="Parent's Phone" name="phone"
+                                               placeholder="Your UPI Id (Optional)" name="phone"
                                                onChange={(e)=>{setGuardianPhone(e.target.value)} } value={guardianPhone}
                                                style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
                                         </Input>

@@ -359,19 +359,14 @@ const userToken1 = {
                     ></Input>
                   </div>
                   <div className="column2" style={{ padding: "1%" }}>
-                    <Link
-                      to={{
-                        pathname: "/Pay",
-                        state: {
-                          email: email,
-                        },
-                      }}
+                    <a
+                    href="https://razorpay.com/upi/"
                       className="button button-primary button-wide-mobile button-sm"
                       onClick=""
                       style={{ backgroundColor: "#3d946e" }}
                     >
                       Donate
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -401,9 +396,9 @@ const userToken1 = {
                       <br />
                       Parent's gender: {student.guardianGender}
                       <br />
-                      Parent's phone: {student.guardianPhone}
-                      <br />
                       Relation: {student.guardianRelation}
+                      <br />
+                      UPI Id: {student.guardianPhone}
                     </p>
                     <br />
                   </div>
