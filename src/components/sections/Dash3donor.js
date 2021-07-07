@@ -396,12 +396,12 @@ const userToken1 = {
                       {student.intro}
                       <br />
                       <br />
-                      Guardian Name:{student.guardianName} <br />
-                      Guardian Age: {student.guardianAge}
+                      Parent's Name:{student.guardianName} <br />
+                      Parent's Age: {student.guardianAge}
                       <br />
-                      Guardian gender: {student.guardianGender}
+                      Parent's gender: {student.guardianGender}
                       <br />
-                      Guardian phone: {student.guardianPhone}
+                      Parent's phone: {student.guardianPhone}
                       <br />
                       Relation: {student.guardianRelation}
                     </p>

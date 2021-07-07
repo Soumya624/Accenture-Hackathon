@@ -218,7 +218,7 @@ const FeaturesSplit = ({
                                                onChange={(e)=>{setStudentPhone(e.target.value)} } value={studentPhone}
                                                style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
                                         </Input>
-                                        <Input id="newsletter" type="number" hasIcon="right" placeholder="Your Standard"
+                                        <Input id="newsletter" type="number" hasIcon="right" placeholder="Your Standard (Only For Students)"
                                                onChange={(e)=>{setStudentStandard(e.target.value)} } value={studentStandard}
                                                name="standard"
                                                style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
@@ -257,8 +257,8 @@ const FeaturesSplit = ({
                   width={528}
                   height={396} /> */}
                                     <p className="m-0">
-                                        <p className="m-0">Guardian's Information</p>
-                                        <Input id="newsletter" type="name" hasIcon="right" placeholder="Guardian's Name"
+                                        <p className="m-0">General Information</p>
+                                        <Input id="newsletter" type="name" hasIcon="right" placeholder="Parent's Name"
                                                name="name"
                                                onChange={(e)=>{setGuardianName(e.target.value)} } value={guardianName}
                                                style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
@@ -267,7 +267,7 @@ const FeaturesSplit = ({
                                             <div className="column" style={{paddingRight: "1%"}}>
                                                 <Input id="newsletter" type="name" hasIcon="right"
                                                        onChange={(e)=>{setGuardianAge(e.target.value)} } value={guardianAge}
-                                                       placeholder="Guardian's Age" name="age" style={{
+                                                       placeholder="Parent's Age" name="age" style={{
                                                     marginTop: "4%",
                                                     borderRadius: "20px",
                                                     borderColor: "grey"
@@ -277,7 +277,7 @@ const FeaturesSplit = ({
                                             <div className="column" style={{paddingLeft: "1%"}}>
                                                 <Input id="newsletter" type="name" hasIcon="right"
                                                        onChange={(e)=>{setGuardianGender(e.target.value)} } value={guardianGender}
-                                                       placeholder="Guardian's Gender" name="gender" style={{
+                                                       placeholder="Parent's Gender" name="gender" style={{
                                                     marginTop: "4%",
                                                     borderRadius: "20px",
                                                     borderColor: "grey"
@@ -286,7 +286,7 @@ const FeaturesSplit = ({
                                             </div>
                                         </div>
                                         <Input id="newsletter" type="name" hasIcon="right"
-                                               placeholder="Guardian's Phone" name="phone"
+                                               placeholder="Parent's Phone" name="phone"
                                                onChange={(e)=>{setGuardianPhone(e.target.value)} } value={guardianPhone}
                                                style={{marginTop: "4%", borderRadius: "20px", borderColor: "grey"}}>
                                         </Input>

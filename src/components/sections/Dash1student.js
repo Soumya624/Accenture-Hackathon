@@ -273,11 +273,11 @@ const FeaturesSplit = ({
                           className="text-sm mb-0"
                           style={{ textAlign: "left", fontSize: "14px" }}
                         >
-                          Guardian Age: {userToken.guardianAge}
+                          Parent's Age: {userToken.guardianAge}
                           <br />
-                          Guardian gender: {userToken.guardianGender}
+                          Parent's gender: {userToken.guardianGender}
                           <br />
-                          Guardian phone: {userToken.guardianPhone}
+                          Parent's phone: {userToken.guardianPhone}
                           <br />
                           Relation: {userToken.guardianRelation}
                           <br />
