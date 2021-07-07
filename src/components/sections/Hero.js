@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
+import Chatbot from "react-chatbot-kit";
+import config from '../../chatbot/config';
+import MessageParser from '../../chatbot/MessageParser';
+import ActionProvider from '../../chatbot/ActionProvider';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
@@ -105,11 +109,17 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
+      <div style={{position:"fixed",bottom:"0", right:"0",zIndex:100, fontSize:"25px"}}>
+        <Chatbot
+            config={config}
+            messageParser={MessageParser}
+            actionProvider={ActionProvider}
+          />
+      </div>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
-
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
               <div className="container-xs">
