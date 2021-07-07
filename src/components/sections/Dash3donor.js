@@ -26,9 +26,9 @@ const defaultProps = {
 
 const config = {
   reference: new Date().getTime(),
-  email: "user@example.com",
+  email: "",  //user email address
   amount: 20000,
-  publicKey: "pk_test_dsdfghuytfd2345678gvxxxxxxxxxx",
+  publicKey: "", //user public key
 };
 
 const handleSuccess = (reference) => {
