@@ -112,14 +112,14 @@ const FeaturesTiles = ({
             {...props}
             className={outerClasses}
         >
-            <div className="container">
+            <div className="container" style={{position:"relative",zIndex:"1"}}>
 
                 <div className={innerClasses}>
-                    <Carousel responsive={responsive} style={{alignItems: "center", marginTop: "5%"}}>
+                    <Carousel responsive={responsive} style={{alignItems: "center", marginTop: "5%",position:"relative",zIndex:"1"}}>
                         {
                             studentList.length ? studentList.map((student, index) => {
                                 return (
-                                    <div style={{height:"300px", margin:"10px",borderRadius:'20px', paddingTop:"10px", paddingBottom:"10px", boxShadow:"#0000000a 3px 2px 2px"}}>
+                                    <div style={{height:"300px", margin:"10px",borderRadius:'20px', paddingTop:"10px", paddingBottom:"10px", boxShadow:"#0000000a 3px 2px 2px",zIndex:"1"}}>
                                         <center>
                                             <img
                                                 src={student.photo}

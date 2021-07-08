@@ -4,6 +4,9 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
+import botSrc from '../../assets/images/chat.png'
+import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
 import Modal from '../elements/Modal';
 import SectionHeader from './partials/SectionHeader';
 import './style.css';
@@ -44,6 +47,7 @@ const defaultProps = {
   ...SectionProps.defaults
 }
 
+
 const Hero = ({
   className,
   topOuterDivider,
@@ -58,8 +62,25 @@ const Hero = ({
   imageFill,
   ...props
 }) => {
-
   const [videoModalActive, setVideomodalactive] = useState(false);
+
+  React.useEffect(()=>{
+    document.addEventListener("click",(e)=>{
+      //sc-kEqXSa bNIVFd rsc-content
+      // sc-eCApnc drnjow rsc-os-options
+      // sc-jrsJWt KSLfZ rsc-container
+      console.log(e.target.parentNode.parentNode.className.indexOf("sc") === -1)
+      console.log(e.target.className === "botClassName")
+
+
+      if((e.target.className === "botClassName" || e.target.parentNode.parentNode.className.indexOf("sc") !== -1)){
+        // continue;
+      }
+      else{
+        setFlag(false)
+      }
+    });
+  })
 
   const openModal = (e) => {
     e.preventDefault();
@@ -101,11 +122,92 @@ const Hero = ({
     paragraph: ''
   };
 
+  const steps=[
+    {
+      id: '1',
+      message: 'Hi, I am the bot of the website',
+      trigger: '2',
+    },
+    {
+      id: '2',
+      options: [
+        { value: 1, label: 'Hello', trigger: '3' },
+      ],
+    },
+    {
+      id: '3',
+      message: 'Good to see you.',
+      trigger: '4',
+    },
+    {
+      id: '4',
+      message: 'Do you want to know about us?',
+      trigger: '5',
+    },
+    {
+      id: '5',
+      options: [
+        { value: 1, label: 'Yes', trigger: '3' },
+        { value: 2, label: 'No', trigger: '6' },
+      ],
+    },
+    {
+      id: '6',
+      message: 'Do you have any question?',
+      trigger:'7',
+    },
+    {
+      id: '7',
+      options: [
+        { value: 1, label: 'Yes', trigger: '3' },
+        { value: 2, label: 'No', trigger: '9' },
+      ],
+    },
+    {
+      id: '9',
+      message: 'Bye!',
+      end: true
+    },
+  ]
+
+  const [flag,setFlag] = React.useState(false);
+
+  const theme = {
+    background: '#f5f8fb',
+    headerBgColor: '#3d946e',
+    headerFontColor: '#fff',
+    headerFontSize: '18px',
+    botBubbleColor: '#3d946e',
+    botFontColor: '#fff',
+    userBubbleColor: '#fff',
+    userFontColor: '#4a4a4a',
+  };
+
+  const botRef = React.useRef(null);
   return (
     <section
       {...props}
       className={outerClasses}
     >
+    <div ref={botRef} className="botClassName" onClick={()=>{
+      console.log(botRef);
+    }}>
+    <div style={{position:"fixed", bottom:"0",right:"0", zIndex:"1000",width:"75px"}}>
+      <Button style={{width:"110px",background:"none",position:"relative",animation:"animBot ease-in-out 2s"}} onClick={()=>{
+        setFlag(!flag);
+      }}>
+        <img style={{width:"40vw"}} className="botClassName"  src={botSrc}/>
+      <div style={{position:"relative",right:"43px",bottom:"24px",animation:"fadeMe 6s",color:"#3d946e"}}>
+        Hello
+      </div>
+      </Button>
+    </div>
+    <div style={{position:"fixed",bottom:"10vh",right:"0",zIndex:"100000", display:flag ? "block":"none"}}>
+      <ThemeProvider theme={theme}>
+        <ChatBot steps={steps} style={{textAlign:"left", fontFamily:"sans-serif"}}/>
+      </ThemeProvider>
+    </div>
+    </div>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

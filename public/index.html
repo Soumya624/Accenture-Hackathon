@@ -24,7 +24,31 @@
     -->
     <title>Hackathon</title>
 </head>
+<style>
+  @keyframes fadeMe {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
 
+@keyframes animBot {
+  0%{
+    bottom: 100vh;
+  }
+  20%{
+    bottom: 0;
+  }
+  40%{
+    bottom: 50vh;
+  }
+  100%{
+    bottom: 0vh;
+  }
+}
+</style>
 <body class="has-animations" style="background-color: white;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" class="body-wrap"></div>

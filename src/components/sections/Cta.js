@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Input from "../elements/Input";
+import botStc from '../../assets/images/chat.png'
 import i18n from "i18next";
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
@@ -50,32 +51,60 @@ const Cta = ({
 
   const theme = {
     background: '#f5f8fb',
-    fontFamily: 'Helvetica Neue',
-    headerBgColor: '#EF6C00',
+    headerBgColor: '#3d946e',
     headerFontColor: '#fff',
     headerFontSize: '15px',
-    botBubbleColor: '#EF6C00',
+    botBubbleColor: '#3d946e',
     botFontColor: '#fff',
     userBubbleColor: '#fff',
     userFontColor: '#4a4a4a',
   };
-const steps = [
-    {
-      id: '0',
-      message: 'Hey! Do You Have Any Problem?',
-      trigger: '1',
-    },
-    {
-      id: '1',
-      user: true,
-      trigger: '2',
-    },
-    {
-        id: '2',
-        message: 'Alright Our Team Will Reach Out. You Can Even Call Us on +91-1234567890!',
-        trigger: '1',
-      },
-  ];
+// const steps = [
+//     {
+//       id: '0',
+//       message: 'Hi, I am Ltob.',
+//       trigger: '1',
+//     },
+//     {
+//       id: '1',
+//       message: 'Do you have any problem',
+//       trigger: '1',
+//     },
+//     {
+//       id: '2',
+//       user: true,
+//       trigger: '3',
+//     },
+//     {
+//         id: '3',
+//         message: 'Alright Our Team Will Reach Out. You Can Even Call Us on +91-1234567890!',
+//         trigger: '1',
+//       },
+//   ];
+
+const steps=[
+  {
+    id: '1',
+    message: 'Hi, I am the bot of the website',
+    trigger: '2',
+  },
+  {
+    id: '2',
+    options: [
+      { value: 1, label: 'Hello', trigger: '3' },
+    ],
+  },
+  {
+    id: '3',
+    message: 'Good to see you.',
+    trigger: '4',
+  },
+  {
+    id: '4',
+    message: 'Do you want to know about us?',
+    trigger: '2',
+  },
+]
 
   const { t } = useTranslation();
 
@@ -84,14 +113,16 @@ const steps = [
  
   return (
     <section {...props} className={outerClasses}>
-      <center>
-        <p className="m-0">{t("key34")}
-        <Button
+      {/* <center> */}
+        {/* <p className="m-0">{t("key34")} */}
+        {/* <div style={{position:"fixed", bottom:"0",right:"0"}}>
+          <Button style={{width:"100px",background:"none"}}>
+            <img style={{width:"100%"}}  src={botStc}/>
+          </Button>
+        </div> */}
+        {/* <Button
           onClick={()=> {
-            console.log(flag)
             setFlag(!flag)
-            
-            console.log(flag)
           }}
           className="button button-primary button-wide-mobile button-sm"
           style={{
@@ -108,8 +139,7 @@ const steps = [
                 <ChatBot steps={steps} style={{textAlign:"left", display: flag===true ? "block":"none", fontFamily:"sans-serif"}}/>
             </ThemeProvider>
         </div>
-      </center><br/><br/>
-
+      </center><br/><br/> */}
       <div className="container" style={{ backgroundColor: "#3d946e" }}>
         <div className={innerClasses} style={{ backgroundColor: "#3d946e" }}>
           <div className="cta-slogan">
