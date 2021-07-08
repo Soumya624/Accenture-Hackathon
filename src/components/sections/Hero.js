@@ -73,12 +73,15 @@ const Hero = ({
       //sc-kEqXSa bNIVFd rsc-content
       // sc-eCApnc drnjow rsc-os-options
       // sc-jrsJWt KSLfZ rsc-container
-      console.log(e.target.parentNode.parentNode.className.indexOf("sc") === -1)
-      console.log(e.target.className === "botClassName")
+      // console.log(e.target.parentNode.parentNode.className.indexOf("sc") === -1)
+      // console.log(e.target.className === "botClassName")
 
 
-      if((e.target.className === "botClassName" || e.target.parentNode.parentNode.className.indexOf("sc") !== -1)){
-        // continue;
+      if((e.target.className === "botClassName" )){
+        if(e.target.parentNode.parentNode.className.indexOf("sc") !== -1){
+            // continue;
+        }
+        
       }
       else{
         setFlag(false)
