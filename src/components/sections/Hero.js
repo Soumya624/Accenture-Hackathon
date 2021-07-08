@@ -60,8 +60,12 @@ const Hero = ({
   invertDesktop,
   alignTop,
   imageFill,
+  refCta,
   ...props
 }) => {
+
+
+  console.log(refCta)
   const [videoModalActive, setVideomodalactive] = useState(false);
 
   React.useEffect(()=>{
@@ -121,6 +125,23 @@ const Hero = ({
     title: '',
     paragraph: ''
   };
+  function RedirectPage(){
+    console.log(refCta)
+    if(refCta.current !== null){
+      console.log('Hello')
+      refCta.current.scrollIntoView(
+        {
+          behavior: "smooth", 
+        }
+      )
+    }
+
+    setTimeout(function(){
+      setFlag(false)
+    },1000)
+
+    return <p style={{fontSize:"18px",color:"#3d946e",textAlign:"center",}}>You are redirecting to our Email Submission Tab.</p>
+  }
 
   const steps=[
     {
@@ -147,7 +168,7 @@ const Hero = ({
     {
       id: '5',
       options: [
-        { value: 1, label: 'Yes', trigger: '3' },
+        { value: 1, label: 'Yes', trigger: '8' },
         { value: 2, label: 'No', trigger: '6' },
       ],
     },
@@ -159,7 +180,7 @@ const Hero = ({
     {
       id: '7',
       options: [
-        { value: 1, label: 'Yes', trigger: '3' },
+        { value: 1, label: 'Yes', trigger: '10' },
         { value: 2, label: 'No', trigger: '9' },
       ],
     },
@@ -168,6 +189,16 @@ const Hero = ({
       message: 'Bye!',
       end: true
     },
+    {
+      id: '8',
+      message:"We are a creating where people can donate money to help economically backward people.",
+      trigger:'6'
+    },
+    {
+      id: '10',
+      component:<RedirectPage/>,
+      end: true
+    }
   ]
 
   const [flag,setFlag] = React.useState(false);

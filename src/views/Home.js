@@ -8,16 +8,26 @@ import Cta from '../components/sections/Cta';
 
 
 const Home = () => {
+    const refCta = React.useRef(null)
+    const [ ref, setRef ] = React.useState(null)
+
+    React.useEffect(()=>{
+        console.log(refCta)
+        setRef(refCta)
+        console.log(refCta)
+    },[refCta])
     
     return (
         <>
             <br/><br/><br/>
-            <Hero className="illustration-section-01"/>
+            <Hero className="illustration-section-01" refCta={refCta}/>
             <br/><br/><br/><br/>
             <FeaturesTiles/>
             <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02"/>
             <Testimonial topDivider/>
-            <Cta split/>
+            <div ref={refCta}>
+                <Cta split/>
+            </div>
             
         </>
     );
