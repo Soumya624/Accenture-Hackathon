@@ -262,7 +262,7 @@ const Hero = ({
                         {t('key7')}
                         </Button>
                       <Button tag="a" color="dark" wideMobile href="/Signup_Student" style={{backgroundColor:"#3d946e"}}>
-                        {t('key8')}
+                        {t('key37')}
                       </Button>
                     </ButtonGroup>
                     <div style={{textAlign:"right", marginTop:"2%"}}>
