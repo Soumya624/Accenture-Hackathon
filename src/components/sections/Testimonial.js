@@ -97,7 +97,7 @@ const Testimonial = ({
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">eDOPT</a>
+                    <a href="#0">Demo</a>
                   </span>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const Testimonial = ({
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">eDOPT</a>
+                    <a href="#0">Demo</a>
                   </span>
                 </div>
               </div>
@@ -176,7 +176,7 @@ const Testimonial = ({
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">eDOPT</a>
+                    <a href="#0">Demo</a>
                   </span>
                 </div>
               </div>
