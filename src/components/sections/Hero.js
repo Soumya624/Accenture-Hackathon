@@ -77,15 +77,13 @@ const Hero = ({
       // console.log(e.target.className === "botClassName")
 
 
-      if((e.target.className === "botClassName" )){
-        if(e.target.parentNode.parentNode.className.indexOf("sc") !== -1){
+       if((e.target.parentNode)){
+        if(e.target.parentNode.parentNode.className.indexOf("sc") !== -1 || e.target.className === "botClassName" ){
             // continue;
         }
-        
-      }
       else{
         setFlag(false)
-      }
+      }}
     });
   })
 
